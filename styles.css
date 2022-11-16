@@ -1,3 +1,5 @@
-.nav-item {
-    size: 5vw;
+.nav.nav-tabs {
+    background-color:#E9E4D4; 
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
