@@ -96,3 +96,8 @@ a.btn:focus {
   background-color: var(--beige-2);
   border-radius: 5px;
 }
+
+/* Links */
+.links {
+  color:white; 
+}
