@@ -1,251 +1,398 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upcoming Events</title>
-    <link rel="icon" href="../assets/saclogob.png">
-    <link rel="stylesheet" type="text/css" href="../styles.css" />
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!-- Bootstrap 5 JS w/ Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upcoming Events</title>
+  <link rel="icon" href="../assets/saclogob.png" />
+  <link rel="stylesheet" type="text/css" href="../styles.css" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+    crossorigin="anonymous"
+  />
+  <!-- Bootstrap 5 JS w/ Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    (function (window, document, undefined) {
+      // code that should be taken care of right away
+
+      window.onload = init;
+
+      function init() {
+        //get month
+        var month = new Date().getMonth() + 1;
+        console.log(String(month));
+        console.log(document.getElementById("_" + String(month)));
+        //set active month link to current month
+        const monthLink = document.getElementById("_" + String(month));
+        monthLink.classList.add("active");
+        monthLink.setAttribute("aria-current", "page");
+
+        const monthName = [
+          "january",
+          "february",
+          "march",
+          "april",
+          "may",
+          "june",
+          "july",
+          "august",
+          "september",
+          "october",
+          "november",
+          "december",
+        ][month - 1];
+        const monthBody = document.getElementById(monthName);
+        monthBody.classList.add("active");
+      }
+    })(window, document, undefined);
+  </script>
 </head>
 
-<body style="background-color:#E9E4D4;">
-    <header>
-        <div class="container-fluid px-5 py-2" style="background-color:#E9E4D4;">
-            <nav class="navbar navbar-expand-lg">
-                <a href="../index.html"><img src="../assets/saclogo.png" alt="" width="50"></a>
-                <a class="navbar-brand ps-4 pe-5" href="../index.html">Markville SAC</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../html/upcoming-events.html">Upcoming Events</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../html/clubs.html">Clubs</a>
-                        </li>
-                        
-                        <!-- <li class="nav-item">
+<body style="background-color: #e9e4d4">
+  <header>
+    <div class="container-fluid px-5 py-2" style="background-color: #e9e4d4">
+      <nav class="navbar navbar-expand-lg">
+        <a href="../index.html"
+          ><img src="../assets/saclogo.png" alt="" width="50"
+        /></a>
+        <a class="navbar-brand ps-4 pe-5" href="../index.html">Markville SAC</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../html/upcoming-events.html"
+                >Upcoming Events</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/clubs.html">Clubs</a>
+            </li>
+            <!-- <li class="nav-item">
                             <a class="nav-link" href="../html/student-resources.html">Student Resources</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="../html/about.html">About</a>
                         </li> -->
-                    </ul>
-                </div>
-                <a target="_blank" href="http://instagram.com/markvillesac"><img src="../assets/socials/ig.svg" width="30" class=""></a>
-            </nav>
+          </ul>
         </div>
-    </header>
+        <a target="_blank" href="http://instagram.com/markvillesac"
+          ><img src="../assets/socials/ig.svg" width="30" class=""
+        /></a>
+      </nav>
+    </div>
+  </header>
+  <main style="background-color: #e9e4d4">
+    <div
+      class="container-fluid px-5"
+      style="background-color: #d9d9d9; padding-top: 10vw; padding-bottom: 3vw"
+    >
+      <h1 style="text-transform: uppercase">Upcoming Events</h1>
+      <h5>
+        Exciting monthly events ran by Markville Student Activity Council!
+      </h5>
+    </div>
+    <div class="container-fluid py-5 px-5">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a id="_10" class="nav-link" data-bs-toggle="tab" href="#october"
+            >October</a
+          >
+        </li>
+        <li class="nav-item">
+          <a id="_11" class="nav-link" data-bs-toggle="tab" href="#november"
+            >November</a
+          >
+        </li>
+        <li class="nav-item">
+          <a id="_12" class="nav-link" data-bs-toggle="tab" href="#december"
+            >December</a
+          >
+        </li>
+        <li class="nav-item">
+          <a id="_1" class="nav-link" data-bs-toggle="tab" href="#january"
+            >January</a
+          >
+        </li>
+        <li class="nav-item">
+          <a id="_2" class="nav-link" data-bs-toggle="tab" href="#february"
+            >February</a
+          >
+        </li>
+        <li class="nav-item">
+          <a id="_3" class="nav-link" data-bs-toggle="tab" href="#march"
+            >March</a
+          >
+        </li>
+        <li class="nav-item">
+          <a id="_4" class="nav-link" data-bs-toggle="tab" href="#april"
+            >April</a
+          >
+        </li>
+        <li class="nav-item">
+          <a id="_5" class="nav-link" data-bs-toggle="tab" href="#may">May</a>
+        </li>
+        <li class="nav-item">
+          <a id="_6" class="nav-link" data-bs-toggle="tab" href="#june">June</a>
+        </li>
+      </ul>
 
-    <main style="background-color:#E9E4D4;">
-        <div class="container-fluid px-5" style="background-color:#D9D9D9; padding-top:10vw; padding-bottom:3vw;">
-            <h1 style="text-transform:uppercase;">Upcoming Events</h1>
-            <h5>Exciting monthly events ran by Markville Student Activity Council!</h5>
-        </div>
+      <div
+        class="tab-content"
+        style="
+          border-bottom-left-radius: 1vw;
+          border-bottom-right-radius: 1vw;
+          border-top-right-radius: 1vw;
+          background-color: white;
+        "
+      >
+        <div class="tab-pane" id="october">
+          <div class="row p-5">
+            <div class="col">
+              <h3 style="color: #032642">World Teacher Day</h3>
+              <p>
+                SAC will be handing out cards and gifts to show our appreciation
+                to the teachers at Markville Secondary School!
+              </p>
+              <p>Date: October 5, 2022</p>
 
-        <div class="container-fluid py-5 px-5">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" data-bs-toggle="tab" href="#october">October</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#november">November</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#december">December</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#january">January</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#february">February</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#march">March</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#april">April</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#may">May</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#june">June</a>
-                </li>
-            </ul>
+              <hr />
 
-            <div class="tab-content" style="border-bottom-left-radius: 1vw; border-bottom-right-radius: 1vw; border-top-right-radius: 1vw; background-color:white;">
-                <div class="tab-pane active" id="october">
-                    <div class="row p-5">
-                        <div class="col">
-                            <h3 style="color:#032642">World Teacher Day</h3>
-                            <p>SAC will be handing out cards and gifts to show our appreciation to the teachers at Markville Secondary School!</p>
-                            <p>Date: October 5, 2022</p>
+              <h3 style="color: #032642">Club Fair</h3>
+              <p>Date: October 7, 2022 @ P3 & P4</p>
+              <p>Location: Atrium</p>
+              <p>Interested in starting or joining a club?</p>
+              <a
+                type="button"
+                style="background-color: #032642"
+                class="btn btn-dark"
+                href="clubs.html"
+                >Learn More</a
+              >
 
-                            <hr>
-                            
-                            <h3 style="color:#032642">Club Fair</h3>
-                            <p>Date: October 7, 2022 @ P3 & P4</p>
-                            <p>Location: Atrium</p>
-                            <p>Interested in starting or joining a club?</p>
-                            <a type="button" style="background-color: #032642;" class="btn btn-dark" href="clubs.html">Learn More</a>
-                            
-                            <hr>
-                            
-                            <h3 style="color:#032642">Halloween</h3>
-                            <p>Date: October 31, 2022 @ P3 & P4</p>
-                            <p>Location: Atrium</p>
-                                
-                            <p>Come down to the atrium to participate in cool events ran by SAC!</p>
-                            <a type="button" target="_blank" style="background-color: #032642;" class="btn btn-dark" href="https://www.instagram.com/reel/CkULPqiAo9n/?utm_source=ig_web_copy_link">Promo Video</a>
-                            <a type="button" target="_blank" style="background-color: #032642;" class="btn btn-dark" href="https://www.instagram.com/p/CkXHtVgMice/?utm_source=ig_web_copy_link">Event Post</a>
-                            <a type="button" target="_blank" style="background-color: #032642;" class="btn btn-dark" href="https://www.instagram.com/reel/CkZeAcypdu1/?utm_source=ig_web_copy_link">Recap Video</a>
-                        </div>
-                    </div>
-                </div>
+              <hr />
 
-                <div class="tab-pane" id="november">
-                    <div class="row p-5">
-                        <div class="col">
-                            <h3 style="color:#032642">Grade 8 Day</h3>
-                            <p>Date: November 2, 2022 @ P3</p>
-                            <p>Location: Large Gym</p>
-                            <a target="_blank" type="button" style="background-color: #032642;" class="btn btn-dark" href="https://drive.google.com/file/d/1KF0AoErsO0ZT-q1gNpP1f60gtzxSkDYG/view?usp=share_link">Video</a>
-                            
-                            <hr>
-                            
-                            <h3 style="color:#032642">Markville Birthday Celebration</h3>
-                            <p>Date: November 22, 2022 @ P3 & P4</p>
-                            <p>Location: Cafeteria</p>
-                                
-                            <p>Come down to the cafeteria to receive cake and celebrate Markville's Birthday!</p>
-                            <!-- <a target="_blank" type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Video</a> -->
+              <h3 style="color: #032642">Halloween</h3>
+              <p>Date: October 31, 2022 @ P3 & P4</p>
+              <p>Location: Atrium</p>
 
-                            <hr>
-
-                            <h3 style="color:#032642">Spirit Week</h3>
-                            <p>Date: November 21 - 25, 2022</p>
-                                
-                            <p>Dress up with your friends to receive <i>Rep Your Grade</i> points!</p>
-                            <ul>
-                                <li>Monday --> <i>"Men in Black"</i> Monday</li>
-                                <li>Tuesday --> Markville Day!</li>
-                                <li>Wednesday --> White Lie Wednesday</li>
-                                <li>Thursday --> Twin Thursday</li>
-                                <li>Friday --> Zoom Fit Friday</li>
-                            </ul>
-                            <!-- <a target="_blank" type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Video</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="december">
-                    <div class="row p-5">
-                        <div class="col">
-                            <h3 style="color:#032642">Winter Movie Night</h3>
-                            <p>Date: December 22, 2022 @ 3:00 PM - 5:30 PM</p>
-                            <p>Location: Cafeteria</p>
-                                
-                            <p>Buy tickets to attend our holiday movie night brought to you by SAC!</p>
-                            <p>Movie: TBD</p>
-                            <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="january">
-                    <div class="row p-5">
-                        <div class="col">
-                            <h3 style="color:#032642">TBD</h3>
-                            <!-- <p>Date: October 4, 2022 @ P3 & P4</p> -->
-                            <!-- <p>Location: Atrium</p> -->
-                                
-                            <p>Coming soon!</p>
-                            <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="february">
-                    <div class="row p-5">
-                        <div class="col">
-                            <h3 style="color:#032642">Semi Formal</h3>
-                            <p>Date: February 23, 2022 @ TBD</p>
-                            <p>Location: Brighton Convention Center</p>
-                            <p>What better way to kick off the new semester than to attend Markville's Semi Formal. It is open to <strong>ALL</strong> grades and will be hosted at Brighton Convention Center.</p>
-                            <a type="button" target="_blank" style="background-color: #032642;" class="btn btn-dark" href="https://www.instagram.com/p/Ck7XUbKsNlm/?utm_source=ig_web_copy_link">Theme Voting</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="march">
-                    <div class="row p-5">
-                        <div class="col">
-                            <h3 style="color:#032642">TBD</h3>
-                            <!-- <p>Date: October 4, 2022 @ P3 & P4</p> -->
-                            <!-- <p>Location: Atrium</p> -->
-                                
-                            <p>Coming soon!</p>
-                            <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="april">
-                    <div class="row p-5">
-                        <div class="col">
-                            <h3 style="color:#032642">TBD</h3>
-                            <!-- <p>Date: October 4, 2022 @ P3 & P4</p> -->
-                            <!-- <p>Location: Atrium</p> -->
-                                
-                            <p>Coming soon!</p>
-                            <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="may">
-                    <div class="row p-5">
-                        <div class="col">
-                            <h3 style="color:#032642">TBD</h3>
-                            <!-- <p>Date: October 4, 2022 @ P3 & P4</p> -->
-                            <!-- <p>Location: Atrium</p> -->
-                                
-                            <p>Coming soon!</p>
-                            <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane" id="june">
-                    <div class="row p-5">
-                        <div class="col">
-                            <h3 style="color:#032642">TBD</h3>
-                            <!-- <p>Date: October 4, 2022 @ P3 & P4</p> -->
-                            <!-- <p>Location: Atrium</p> -->
-                                
-                            <p>Coming soon!</p>
-                            <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
-                        </div>
-                    </div>
-                </div>
+              <p>
+                Come down to the atrium to participate in cool events ran by
+                SAC!
+              </p>
+              <a
+                type="button"
+                target="_blank"
+                style="background-color: #032642"
+                class="btn btn-dark"
+                href="https://www.instagram.com/reel/CkULPqiAo9n/?utm_source=ig_web_copy_link"
+                >Promo Video</a
+              >
+              <a
+                type="button"
+                target="_blank"
+                style="background-color: #032642"
+                class="btn btn-dark"
+                href="https://www.instagram.com/p/CkXHtVgMice/?utm_source=ig_web_copy_link"
+                >Event Post</a
+              >
+              <a
+                type="button"
+                target="_blank"
+                style="background-color: #032642"
+                class="btn btn-dark"
+                href="https://www.instagram.com/reel/CkZeAcypdu1/?utm_source=ig_web_copy_link"
+                >Recap Video</a
+              >
             </div>
-        
+          </div>
         </div>
-    </main>
+
+        <div class="tab-pane" id="november">
+          <div class="row p-5">
+            <div class="col">
+              <h3 style="color: #032642">Grade 8 Day</h3>
+              <p>Date: November 2, 2022 @ P3</p>
+              <p>Location: Large Gym</p>
+              <a
+                target="_blank"
+                type="button"
+                style="background-color: #032642"
+                class="btn btn-dark"
+                href="https://drive.google.com/file/d/1KF0AoErsO0ZT-q1gNpP1f60gtzxSkDYG/view?usp=share_link"
+                >Video</a
+              >
+
+              <hr />
+
+              <h3 style="color: #032642">Markville Birthday Celebration</h3>
+              <p>Date: November 22, 2022 @ P3 & P4</p>
+              <p>Location: Cafeteria</p>
+
+              <p>
+                Come down to the cafeteria to receive cake and celebrate
+                Markville's Birthday!
+              </p>
+              <!-- <a target="_blank" type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Video</a> -->
+
+              <hr />
+
+              <h3 style="color: #032642">Spirit Week</h3>
+              <p>Date: November 21 - 25, 2022</p>
+
+              <p>
+                Dress up with your friends to receive
+                <i>Rep Your Grade</i> points!
+              </p>
+              <ul>
+                <li>Monday --> <i>"Men in Black"</i> Monday</li>
+                <li>Tuesday --> Markville Day!</li>
+                <li>Wednesday --> White Lie Wednesday</li>
+                <li>Thursday --> Twin Thursday</li>
+                <li>Friday --> Zoom Fit Friday</li>
+              </ul>
+              <!-- <a target="_blank" type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Video</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="december">
+          <div class="row p-5">
+            <div class="col">
+              <h3 style="color: #032642">Winter Movie Night</h3>
+              <p>Date: December 22, 2022 @ 3:00 PM - 5:30 PM</p>
+              <p>Location: Cafeteria</p>
+
+              <p>
+                Buy tickets to attend our holiday movie night brought to you by
+                SAC!
+              </p>
+              <p>Movie: TBD</p>
+              <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="january">
+          <div class="row p-5">
+            <div class="col">
+              <h3 style="color: #032642">TBD</h3>
+              <!-- <p>Date: October 4, 2022 @ P3 & P4</p> -->
+              <!-- <p>Location: Atrium</p> -->
+
+              <p>Coming soon!</p>
+              <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="february">
+          <div class="row p-5">
+            <div class="col">
+              <h3 style="color: #032642">Semi Formal</h3>
+              <p>Date: February 23, 2022 @ TBD</p>
+              <p>Location: Brighton Convention Center</p>
+              <p>
+                What better way to kick off the new semester than to attend
+                Markville's Semi Formal. It is open to
+                <strong>ALL</strong> grades and will be hosted at Brighton
+                Convention Center.
+              </p>
+              <a
+                type="button"
+                target="_blank"
+                style="background-color: #032642"
+                class="btn btn-dark"
+                href="https://www.instagram.com/p/Ck7XUbKsNlm/?utm_source=ig_web_copy_link"
+                >Theme Voting</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="march">
+          <div class="row p-5">
+            <div class="col">
+              <h3 style="color: #032642">TBD</h3>
+              <!-- <p>Date: October 4, 2022 @ P3 & P4</p> -->
+              <!-- <p>Location: Atrium</p> -->
+
+              <p>Coming soon!</p>
+              <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="april">
+          <div class="row p-5">
+            <div class="col">
+              <h3 style="color: #032642">TBD</h3>
+              <!-- <p>Date: October 4, 2022 @ P3 & P4</p> -->
+              <!-- <p>Location: Atrium</p> -->
+
+              <p>Coming soon!</p>
+              <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="may">
+          <div class="row p-5">
+            <div class="col">
+              <h3 style="color: #032642">TBD</h3>
+              <!-- <p>Date: October 4, 2022 @ P3 & P4</p> -->
+              <!-- <p>Location: Atrium</p> -->
+
+              <p>Coming soon!</p>
+              <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="june">
+          <div class="row p-5">
+            <div class="col">
+              <h3 style="color: #032642">TBD</h3>
+              <!-- <p>Date: October 4, 2022 @ P3 & P4</p> -->
+              <!-- <p>Location: Atrium</p> -->
+
+              <p>Coming soon!</p>
+              <!-- <a type="button" style="background-color: #032642;" class="btn btn-dark" href="#">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
