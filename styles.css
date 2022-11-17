@@ -1,11 +1,43 @@
+:root {
+  --beige-1: #e9e4d4;
+  --beige-2: #dbd5c9;
+  --beige-3: #b8ada4;
+  --beige-4: #3d3a35;
+  --blue-1: #3d5669;
+  --blue-2: #032642;
+}
+
+body,
+header,
+main,
+footer {
+  background: var(--beige-1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--beige-4);
+}
+
+#slider {
+  background-color: var(--beige-3);
+}
+
+.home-nav {
+  background-color: var(--beige-2);
+}
 .nav.nav-tabs {
-  background-color: #e9e4d4;
+  background-color: var(--beige-1);
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
 }
 
 .month {
-  color: #000000;
+  color: var(--beige-4);
   font-weight: 600;
   border: none !important;
 }
@@ -14,20 +46,53 @@
 }
 .nav-link:hover {
   border: none;
-  background: #d1ccb6;
-  color: #000000;
+  background: var(--beige-3);
+  color: var(--beige-4);
 }
 .nav-link.active {
   font-weight: 700;
 }
 
 a.btn {
-  background: #032642;
+  background: var(--blue-2);
   transition: all 0.4s ease;
+  font-weight: 600;
+  border: none;
 }
 a.btn:hover {
-  background: rgb(100, 95, 126);
+  background: var(--blue-1);
 }
 a.btn:focus {
   border: none;
+}
+
+/*upcoming events */
+.upcoming-header {
+  background-color: var(--beige-3);
+  padding-top: 10vw;
+  padding-bottom: 3vw;
+}
+
+.tab-content {
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+  border-top-right-radius: 1vw;
+  background-color: var(--beige-2);
+}
+
+.nav-link.month.active {
+  background-color: var(--beige-2);
+}
+
+/*clubs page*/
+
+.clubs-header {
+  background-color: var(--beige-3);
+  padding-top: 10vw;
+  padding-bottom: 3vw;
+}
+
+.card-body {
+  background-color: var(--beige-2);
+  border-radius: 5px;
 }
