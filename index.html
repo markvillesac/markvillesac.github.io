@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +8,6 @@
   />
   <title>Markville SAC</title>
   <link rel="icon" href="assets/saclogob.png" />
-  <link href="styles.css" />
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,6 +22,7 @@
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
     crossorigin="anonymous"
   />
+  <link href="styles.css" />
   <!-- Bootstrap 5 JS w/ Popper -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -92,15 +91,11 @@
 
   <main style="background-color: #e9e4d4">
     <div class="container-fluid" style="background-color: #d9d9d9">
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-bs-ride="true"
-      >
+      <div id="slider" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#slider"
             data-bs-slide-to="0"
             class="active"
             aria-current="true"
@@ -108,13 +103,13 @@
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#slider"
             data-bs-slide-to="1"
             aria-label="Slide 2"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#slider"
             data-bs-slide-to="2"
             aria-label="Slide 3"
           ></button>
@@ -164,24 +159,24 @@
             </div>
           </div>
         </div>
-        <button
+        <a
           class="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#slider"
           data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
-        </button>
-        <button
+        </a>
+        <a
           class="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#slider"
           data-bs-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </button>
+        </a>
       </div>
     </div>
 
@@ -194,9 +189,8 @@
         <div class="col-md">
           <iframe
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FToronto&mode=AGENDA&showTitle=0&showNav=1&showDate=1&showTabs=0&showCalendars=0&showTz=1&src=Z2FwcHMueXJkc2IuY2FfbnVodWJlZTk4czhtcGZtcjlyY29lN3MydmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23616161"
-            class="w-100"
+            class="w-100 calendar"
             height="600"
-            frameborder="0"
             scrolling="no"
           ></iframe>
         </div>

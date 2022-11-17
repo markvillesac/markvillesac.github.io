@@ -1,5 +1,24 @@
 .nav.nav-tabs {
-    background-color:#E9E4D4; 
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+  background-color: #e9e4d4;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.nav-link {
+  color: #000000;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  border: none !important;
+}
+.nav-link:hover {
+  border: none;
+  background: #d1ccb6;
+  color: #000000;
+}
+.nav-link.active {
+  font-weight: 700;
+}
+
+iframe {
+  border: 3px solid #7f7d75;
 }
