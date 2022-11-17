@@ -4,11 +4,13 @@
   border-top-right-radius: 7px;
 }
 
-.nav-link {
+.month {
   color: #000000;
   font-weight: 600;
-  transition: all 0.5s ease;
   border: none !important;
+}
+.nav-link {
+  transition: all 0.5s ease;
 }
 .nav-link:hover {
   border: none;
@@ -19,6 +21,13 @@
   font-weight: 700;
 }
 
-iframe {
-  border: 3px solid #7f7d75;
+a.btn {
+  background: #032642;
+  transition: all 0.4s ease;
+}
+a.btn:hover {
+  background: rgb(100, 95, 126);
+}
+a.btn:focus {
+  border: none;
 }
