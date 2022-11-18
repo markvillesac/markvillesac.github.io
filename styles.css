@@ -100,3 +100,8 @@ a.btn:focus {
 .links {
   color:white; 
 }
+
+/* Council */
+.badge.tech-dir {
+  background-color: #A4DFFD;
+}
