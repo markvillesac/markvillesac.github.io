@@ -28,7 +28,7 @@ h6 {
 }
 
 .home-nav {
-  background-color: var(--beige-2);
+  background-color: var(--beige-1);
 }
 .nav.nav-tabs {
   background-color: var(--beige-1);
@@ -102,6 +102,10 @@ a.btn:focus {
 }
 
 /* Council */
-.tag-exec {
-  
+
+
+.card-body.council {
+  border-color:var(--beige-2);
+  border-width: 1vw;
+  background-color:var(--beige-1);
 }
