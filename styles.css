@@ -102,10 +102,13 @@ a.btn:focus {
 }
 
 /* Council */
-
-
 .card-body.council {
   border-color:var(--beige-2);
   border-width: 1vw;
   background-color:var(--beige-1);
+}
+
+.resources {
+  width:50vw;
+  height:30vw;
 }
