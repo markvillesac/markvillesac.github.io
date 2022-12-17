@@ -195,7 +195,25 @@
 
         <div class="col-md py-5">
           <h2><strong>About Markville SAC</strong></h2>
-          <a type="button" class="btn btn-dark" href="#">Open Positions</a>
+          <!-- Button trigger modal -->
+          <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Learn More</a>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <p>There are currently no open positions. Check back later!</p>
+                </div>
+                <div class="modal-footer">
+                  <a type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
