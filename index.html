@@ -33,6 +33,8 @@
     content="oQbPNucCgFdhHADRdFuWqvieTk3qyHibo7dO14AGi8Q"
   />
   <link rel="stylesheet" href="styles.css" type="text/css" />
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script> $(function(){ $("#footer").load("/html/footer.html"); });</script>
 </head>
 
 <body>
@@ -152,16 +154,8 @@
       <div class="row">
         <div class="col-md">
           <h2><strong>Upcoming Events</strong></h2>
-          <h3>Winter Movie Night</h3>
-          <p>Date: December 22, 2022 @ 3:00 PM - 5:30 PM</p>
-          <p>Location: Cafeteria</p>
-
-          <hr>
-
-          <h3>Winter Event</h3>
-          <p>Date: December 23, 2022 @ P3 & P4</p>
-          <p>Location: Atrium</p>
-
+          <h3>Coming soon...</h3>
+          
           <a type="button" class="btn btn-dark w-100 my-5" href="html/upcoming-events.html">Learn more</a>
         </div>
 
@@ -169,9 +163,9 @@
           <h2><strong>School Wide Calendar</strong></h2>
           <iframe
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FToronto&mode=AGENDA&showTitle=0&showNav=1&showDate=1&showTabs=0&showCalendars=0&showTz=1&src=Z2FwcHMueXJkc2IuY2FfbnVodWJlZTk4czhtcGZtcjlyY29lN3MydmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23616161"
-            class="w-100 h-100 calendar"
-            
+            class="w-100 calendar"
             scrolling="no"
+            height="500"
           ></iframe>
         </div>
       </div>
@@ -228,4 +222,6 @@
       <a type="button" target="_blank" class="btn btn-dark" href="https://www2.yrdsb.ca/">YRDSB</a>
     </div>
   </main>
+
+  <footer id="footer"></footer>
 </body>
