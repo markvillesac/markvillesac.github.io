@@ -112,3 +112,20 @@ a.btn:focus {
   width:50vw;
   height:30vw;
 }
+
+p.club-desc {
+  color:black;
+}
+
+a.btn.clubs {
+  background: var(--beige-3);
+  transition: all 0.4s ease;
+  font-weight: 600;
+  border: none;
+}
+a.btn.clubs:hover {
+  background: var(--beige-2);
+}
+a.btn.clubs:focus {
+  border: none;
+}
