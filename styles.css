@@ -129,3 +129,13 @@ a.btn.clubs:hover {
 a.btn.clubs:focus {
   border: none;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue-2);
+}
