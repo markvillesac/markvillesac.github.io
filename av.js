@@ -11,4 +11,3 @@ function checkPswd() {
   alert("Passwords do not match.");
  }
 }
- 

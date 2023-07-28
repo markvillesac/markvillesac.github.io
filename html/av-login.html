@@ -87,9 +87,9 @@
         <div class="col-md">
           <h3>Welcome Audio-Visual Crew Member!</h3>
 
-          <form>
+          <form action="av-login.html">
             <label for="pswd" class="form-label">Please enter the password to sign in.</label>
-            <input type="password" class="form-control w-100" id="pswd">
+            <input type="password" class="form-control w-100" id="pswd" onsubmit="checkPswd()">
             <a type="submit" class="links btn btn-primary mt-3" onclick="checkPswd()">Submit</a>
           </form>
         </div>
