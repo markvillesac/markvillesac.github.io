@@ -25,7 +25,7 @@ video = '';
 
 for (i = 0; i < items.length; i++) {
  if (items[i].cat == 'DI') {
-  di += '<li><a target="_blank" class="text-dark" href="' + items[i].fpath + '">' + items[i].n + '</a></li>';
+  di += '<li><a target="_blank" class="text-dark" href="'items[i].fpath'">'items[i].n'</a></li>';
  }
 }
 
